@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_amount"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/calculateButton"
+        app:layout_constraintEnd_toEndOf="@id/calculateButton"
+        app:layout_constraintStart_toStartOf="@id/calculateButton" />
+
+    <EditText
+        android:id="@+id/moneyAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:hint = "Money Amount"
+        app:layout_constraintTop_toBottomOf="@id/Calculator"
+        app:layout_constraintEnd_toEndOf="@id/Calculator"
+        app:layout_constraintStart_toStartOf="@id/Calculator" />
+
+    <EditText
+        android:id="@+id/tipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint = "Tip Percent"
+        android:inputType="number"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/moneyAmount"
+        app:layout_constraintEnd_toEndOf="@id/moneyAmount"
+        app:layout_constraintStart_toStartOf="@id/moneyAmount"
+        />
+
+    <ImageView
+        android:id="@+id/Calculator"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calculator" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:text="Calculate!"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/tipPercent"
+        app:layout_constraintEnd_toEndOf="@+id/tipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercent"/>
+
+    <ImageView
+        android:id="@+id/dollarBill"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@id/tipAmount"
+        app:layout_constraintStart_toStartOf="@id/tipAmount"
+        app:layout_constraintTop_toTopOf="@id/tipAmount"
+        app:srcCompat="@drawable/dollarbill"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
